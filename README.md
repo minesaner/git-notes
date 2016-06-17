@@ -11,7 +11,7 @@
 
 ##`git add`
 ###操作说明
->`git add <.|<file1> <file2>...>` : 把文件添加到仓库
+>`git add <.|<file>...>` : 把文件添加到仓库
 
 ##`git commit`
 ###操作说明
@@ -72,21 +72,27 @@ git log -3
 
 ##`git reset`
 ###操作说明
->`git reset [<commit>] [--] <file>...` : 用指定 `<commit>` 全部或部分文件替换暂存区，不影响工作区  
+>`git reset [<commit>] [--] [<file>...]` : 用指定 `<commit>` 全部或部分文件替换暂存区，不影响工作区  
 `git reset [--hard|--soft|--mixed] [<commit>]` : 替换文件且重置引用  
 
 ####参数说明
 >`--hard` : 重置引用，替换暂存区，替换工作区  
 `--soft` : 只更改引用的指向，不改变暂存区和工作区  
 `--mixed`（默认） : 更改引用的指向及重置暂存区，但是不改变工作区  
-`-q` : Be quiet, only report errors
+`-q` : Be quiet, only report errors.
 
 ##`git checkout`
 ###操作说明
->`git checkout .` : 用暂存区全部文件替换工作区  
+>`git checkout <branch>` : 切换分支，工作区更改保留  
+`git checkout -b|-B <branch>` : 创建并切换到创建的分支  
+`git checkout .` : 用暂存区全部文件替换工作区  
 `git checkout -- <file>` : 用暂存区指定的文件替换工作区  
-`git checkout <branch> .` : 用指定分支的全部文件替换暂存区和工作区  
-`git checkout <branch> <file>` : 用指定分支的部分文件替换暂存区和工作区
+`git checkout <commit> .` : 用指定分支的全部文件替换暂存区和工作区  
+`git checkout <commit> <file>` : 用指定分支的部分文件替换暂存区和工作区
+
+###参数说明
+>`-b` : 创建分支  
+`-B` : 分支不存在时才创建
 
 ##`git diff`
 ###操作说明
