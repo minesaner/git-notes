@@ -70,7 +70,7 @@ git log -3
 ###操作说明
 >`git rm --cached <file>` : 从暂存区删除文件，工作区则不做出改变
 
-##`git reset [-q] [<commit>] [--] <file>...`
+##`git reset`
 ###操作说明
 >`git reset [-q] [<commit>] [--] <file>...` : 用指定 `<commit>` 全部或部分文件替换暂存区，不影响工作区  
 `git reset [--hard|--soft|--mixed] [<commit>]` : 替换文件且重置引用  
@@ -89,9 +89,9 @@ git log -3
 `git checkout <branch> <file>` : 用指定分支的部分文件替换暂存区和工作区
 
 ##`git diff`
-###参数说明
->`--cached` : 提交暂存区和版本库中文件的差异
-
 ###操作说明
 >`git diff` : 比较工作区与提交任务的差异  
 `git diff <branch>` : 工作区和当前工作分支相比的差异
+
+###参数说明
+>`--cached` : 提交暂存区和版本库中文件的差异
