@@ -72,7 +72,7 @@ git log -3
 
 ##`git reset`
 ###操作说明
->`git reset [-q] [<commit>] [--] <file>...` : 用指定 `<commit>` 全部或部分文件替换暂存区，不影响工作区  
+>`git reset [<commit>] [--] <file>...` : 用指定 `<commit>` 全部或部分文件替换暂存区，不影响工作区  
 `git reset [--hard|--soft|--mixed] [<commit>]` : 替换文件且重置引用  
 
 ####参数说明
