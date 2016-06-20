@@ -47,12 +47,28 @@ git log --pretty=format:"%cn committed %h on %cd"
 git log -3
 ```  
 
+##`git remote`
+###操作说明
+>`git remote rename <old> <new>`: 重命名  
+`git remote remove <name>`: 删除  
+`git remote [-v | --verbose] show [-n] <name>…`: 显示远程连接的详细信息  
+`git remote add [-f] [--[no-]tags] <name> <url>`: 添加远程对应关系
+
+####参数说明
+>`-v`: 显示地址  
+`-f`: 远程对应关系完毕后立即执行 `git fetch <name>`  
+`--[no-]tags`: 执行 `git fetch <name>` 时是否导入书签
+
 ##`git push`
 ###操作说明
 >`git push <remote> <branch>:<rembra>` : 将本地分支的更新，推送到远程主机  
 `git push <remote> <branch>` : 将本地分支推送与之存在”追踪关系”的远程分支(通常两者同名)，如果该远程分支不存在，则会被新建  
 `git push <remote> :<rembra>` : 删除指定的远程分支  
 `git push <remote> --delete <rembra>` : 删除指定的远程分支
+
+##`git fetch`
+###操作说明
+>`git fetch [<options>] [<repository>]`: 从远程仓库获取更新
 
 ##`git pull`
 ###操作说明
