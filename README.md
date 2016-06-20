@@ -55,7 +55,7 @@ git log -3
 `git remote add [-f] [--[no-]tags] <name> <url>`: 添加远程对应关系
 
 ####参数说明
->`-v`: 显示地址  
+>`-v`|`--verbose`: 较多显示信息  
 `-f`: 远程对应关系完毕后立即执行 `git fetch <name>`  
 `--[no-]tags`: 执行 `git fetch <name>` 时是否导入书签
 
@@ -69,6 +69,12 @@ git log -3
 ##`git fetch`
 ###操作说明
 >`git fetch [<options>] [<repository>]`: 从远程仓库获取更新
+
+####参数说明
+>`-v`|`--verbose`: 较多显示信息  
+`--progress`: 显示进度  
+`-n`|`--no-tags`: 不下载标记  
+`-t`|`--tags`: 下载标记
 
 ##`git pull`
 ###操作说明
@@ -117,3 +123,13 @@ git log -3
 
 ###参数说明
 >`--cached` : 提交暂存区和版本库中文件的差异
+
+##`git config`
+###操作说明
+>`git config [<options>] name`: 读取配置  
+`git config [<options>] name [value]`: 设置配置
+
+###参数说明
+>`--global`: 全局设置  
+`--list`: 查看配置文件中的所有配置  
+`--get`: 获取配置
