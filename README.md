@@ -118,11 +118,18 @@ git log -3
 
 ##`git diff`
 ###操作说明
->`git diff` : 比较工作区与提交任务的差异  
-`git diff <branch>` : 工作区和当前工作分支相比的差异
+>`git diff [--options] [--] [<path>…]` : 比较工作区与暂存区的差异  
+`git diff [--options] <commit> [--] [<path>…]` : 工作区和版本库的差异  
+`git diff [--options] --cached [<commit>] [--] [<path>…]`: 暂存区与版本库之间的差异  
+`git diff [--options] <commit> <commit> [--] [<path>…]`: 两个版本库之间的差异  
+`git diff --no-index [--options] [--] [<path>…]`: 两个文件的差异，当其中一文件在工作区之外 `--no-index` 可省略
 
-###参数说明
->`--cached` : 提交暂存区和版本库中文件的差异
+##`git stash`
+###操作说明
+>`git stash list`: 列举所有的存储结点  
+`git stash drop [-q|--quiet] [<stash>]`: 删除指定存储结点或第一个  
+`git stash pop [--index] [-q|--quiet] [<stash>]`: 
+`git stash apply [--index] [-q|--quiet] [<stash>]`: 
 
 ##`git config`
 ###操作说明
