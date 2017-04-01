@@ -20,7 +20,8 @@
 ##`git log`
 ###操作说明
 >`git log <file1>[ <file2>...]` : 查看文件或文件夹的提交记录  
-`git log <branch> --` : 分支的提交记录  
+`git log <branch1> ^<branch2>` : 查看 `<branch1>` 中有 `<branch2>` 中没有的提交  
+`git log <branch> --` : 分支的提交记录  
 `git log -- <file>` : 文件的提交记录  
 `git log <branch> -- <file>`  
 `git log <commit>` -- : `<commit>` 之前的记录，包含此条  
